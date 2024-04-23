@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import SingleUser from "./SingleUser";
+
 const UserList = () => {
   const [users, setUsers] = useState([]);
 
@@ -16,11 +18,11 @@ const UserList = () => {
   return(
     <div className="user-list">
       <ul>
-        {users.map((user, idx) => {(
+        {users.map((user, idx) => (
           <li>
             <SingleUser user={user} key={idx}/>
           </li>
-        )})}
+        ))}
       </ul>
     </div>
   ) 
